@@ -1,0 +1,13 @@
+﻿@model ProductDto
+
+<h1>Product Detail</h1>
+
+<div class="color">
+	<div>
+		<a href="#@Model.Id">
+			<img src="@Model.ImgUrl" />
+		</a>
+	</div>
+	<h2>@Model.Name</h2>
+	<p>@Model.Price</p>
+</div>

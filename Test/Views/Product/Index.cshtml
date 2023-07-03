@@ -1,0 +1,19 @@
+﻿@model ProductIndexViewModel
+
+@{
+	Layout = null;
+}
+
+<link href="~/css/ProductIndex.css"  rel="stylesheet"/>
+<h1>Product Index</h1>
+
+@foreach(var p in Model.ProductList){
+	<div class="color">
+		<div>
+			@*@Html.ActionLink("前往明細","Detail",new {Id=p.Id}) 會自己產出DOM元素*@
+		</div>
+		<a href="/Product/Detail/@p.Id"><h2>@p.Name</h2></a>
+		<p>@p.Price</p>
+	</div>
+}
+
